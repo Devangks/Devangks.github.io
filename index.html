@@ -3,48 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Devang | Links</title>
+<title>Devang | Premium Links</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+
 body{
 font-family:'Poppins',sans-serif;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-min-height:100vh;
-background:#020617;
+background: radial-gradient(circle at top,#0f172a,#020617);
 color:white;
 }
 
+/* container */
 .container{
-max-width:400px;
 width:100%;
+max-width:420px;
+padding:25px;
 text-align:center;
+backdrop-filter:blur(20px);
+border-radius:25px;
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
 }
 
+/* profile */
 .profile-pic{
-width:110px;height:110px;
+width:110px;
+height:110px;
 border-radius:50%;
 border:3px solid #22c55e;
-margin-bottom:10px;
+margin-bottom:12px;
+transition:0.3s;
+}
+.profile-pic:hover{
+transform:scale(1.08);
 }
 
-.links{display:flex;flex-direction:column;gap:12px}
+h1{
+font-size:2rem;
+font-weight:700;
+}
 
+p{
+opacity:0.7;
+margin-bottom:20px;
+}
+
+/* links */
+.links{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+/* button */
 .btn{
-padding:15px;
-border-radius:12px;
-background:#111827;
+padding:14px 18px;
+border-radius:14px;
+background:rgba(255,255,255,0.05);
 text-decoration:none;
 color:white;
 display:flex;
 justify-content:space-between;
+align-items:center;
+transition:0.3s;
+font-weight:500;
 }
 
-.btn:hover{background:#1f2937}
+/* hover animation */
+.btn:hover{
+transform:translateY(-4px) scale(1.02);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* left side (icon + text) */
+.left{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* icon animation */
+.btn i{
+transition:0.3s;
+}
+
+/* arrow move */
+.btn:hover .arrow{
+transform:translateX(6px);
+}
+
+/* brand glow */
+.btn:nth-child(1):hover{box-shadow:0 0 15px #E1306C;} /* insta */
+.btn:nth-child(2):hover{box-shadow:0 0 15px #FF0000;} /* yt */
+.btn:nth-child(3):hover{box-shadow:0 0 15px #1DB954;} /* spotify */
+.btn:nth-child(4):hover{box-shadow:0 0 15px #ffffff;} /* riot */
+.btn:nth-child(5):hover{box-shadow:0 0 15px #229ED9;} /* telegram */
+.btn:nth-child(6):hover{box-shadow:0 0 15px #25D366;} /* whatsapp */
+.btn:nth-child(7):hover{box-shadow:0 0 15px #FFFC00;} /* snapchat */
+
 </style>
 </head>
 
@@ -59,16 +124,40 @@ justify-content:space-between;
 
 <div class="links">
 
-<a href="https://instagram.com/devang_ks" class="btn">Instagram →</a>
-<a href="https://youtube.com/@devang_ks" class="btn">YouTube →</a>
-<a href="https://open.spotify.com/user/313yqn4t66lnfcz5sosdmd36ktly" class="btn">Spotify →</a>
-<a href="https://tracker.gg/valorant/profile/riot/devang%23meow/overview" class="btn">Riot →</a>
-<a href="https://t.me/devang_ks" class="btn">Telegram →</a>
-<a href="https://wa.me/15094282645?text=Hey%20Devang" class="btn">WhatsApp →</a>
+<a href="https://instagram.com/devang_ks" target="_blank" class="btn">
+<div class="left"><i class="fa-brands fa-instagram"></i> Instagram</div>
+<i class="fa-solid fa-arrow-right arrow"></i>
+</a>
+
+<a href="https://youtube.com/@devang_ks" target="_blank" class="btn">
+<div class="left"><i class="fa-brands fa-youtube"></i> YouTube</div>
+<i class="fa-solid fa-arrow-right arrow"></i>
+</a>
+
+<a href="https://open.spotify.com/user/313yqn4t66lnfcz5sosdmd36ktly" target="_blank" class="btn">
+<div class="left"><i class="fa-brands fa-spotify"></i> Spotify</div>
+<i class="fa-solid fa-arrow-right arrow"></i>
+</a>
+
+<a href="https://tracker.gg/valorant/profile/riot/devang%23meow/overview" target="_blank" class="btn">
+<div class="left"><i class="fa-solid fa-gamepad"></i> Riot</div>
+<i class="fa-solid fa-arrow-right arrow"></i>
+</a>
+
+<a href="https://t.me/devang_ks" target="_blank" class="btn">
+<div class="left"><i class="fa-brands fa-telegram"></i> Telegram</div>
+<i class="fa-solid fa-arrow-right arrow"></i>
+</a>
+
+<a href="https://wa.me/15094282645?text=Hey%20Devang" target="_blank" class="btn">
+<div class="left"><i class="fa-brands fa-whatsapp"></i> WhatsApp</div>
+<i class="fa-solid fa-arrow-right arrow"></i>
+</a>
+
 <a href="https://www.snapchat.com/add/devang_ks" target="_blank" class="btn">
-<div class="left"><i class="fa-brands fa-snapchat"></i>Snapchat</div>
-<i class="fa-solid fa-arrow-right"></i>
-  </a>
+<div class="left"><i class="fa-brands fa-snapchat"></i> Snapchat</div>
+<i class="fa-solid fa-arrow-right arrow"></i>
+</a>
 
 </div>
 
